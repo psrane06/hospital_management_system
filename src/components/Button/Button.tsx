@@ -5,9 +5,9 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   customClass?: string;
 }
 
-function Button(props: Props) {
+function Button({ customClass, ...props }: Props) {
   return (
-    <button className={"btn " + props.customClass} {...props}>
+    <button className={"btn " + customClass} {...props}>
       {props.value}
     </button>
   );
